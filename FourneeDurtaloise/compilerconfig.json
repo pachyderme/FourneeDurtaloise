@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "CSS/StyleBase.css",
+    "inputFile": "CSS/StyleBase.scss"
+  },
+  {
+    "outputFile": "CSS/StyleDefault.css",
+    "inputFile": "CSS/StyleDefault.scss"
+  },
+  {
+    "outputFile": "CSS/StyleShop.css",
+    "inputFile": "CSS/StyleShop.scss"
+  }
+]

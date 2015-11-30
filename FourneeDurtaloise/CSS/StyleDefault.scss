@@ -1,0 +1,392 @@
+﻿$beige-bg: #f0f0f0;
+$gris-claire: #7b7575;
+$rouge: #ff5e5e;
+@import "StyleShop.css";
+@import "StyleBase.css";
+@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
+@font-face {
+	font-family: "Icons";
+	src: url("FONTS/Icons/flaticon.eot");
+	src: url("FONTS/Icons/flaticon.eot#iefix") format("embedded-opentype"),
+	url("FONTS/Icons/flaticon.woff") format("woff"),
+	url("FONTS/Icons/flaticon.ttf") format("truetype"),
+	url("FONTS/Icons/flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+        #content-1{
+			width: auto;
+			height: 90vh;
+		}
+		#content-1 ul li:first-child{ margin-top: 20px; }
+		#content-1 ul li:last-child{ margin-bottom: 20px; }
+#RightContent{
+    width: 300px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(123,117,117,0.7);
+    font-family: 'Julius Sans One', sans-serif;
+}
+#SelectionContent{
+    text-align: center;
+    color: $beige-bg;
+}
+#SelectionProduit{
+    width: 100%;
+}
+.ProduitSelection{
+    width: 100%;
+    height: 200px;
+    cursor: pointer;
+}
+#Search{
+    margin-left: 10%;
+    margin-top: 20px;
+    width: 21%;
+    height: 50px;
+    background-color: $gris-claire;
+    z-index: 1;
+}
+#IconSearch{
+    display: inline;
+    height: 100%;
+    color: $beige-bg;
+    margin-left: 1%;
+}
+#IconSearch:before {
+    font-family: 'Icons';
+	content: "\e015";
+    color: $beige-bg;
+    font-size: 1vw;
+}
+#TbSearch{
+    width: 85%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    border-left: 2px solid $beige-bg;
+    margin-left: 1%;
+    outline: none;
+}
+#Content{
+    margin-left: 10%;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    width: 70%;
+    height: auto;
+    min-height: 80vh;
+    overflow-x: auto;
+}
+.Produit{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.ImageProduit{
+    background-image: url("../IMG/pati1.jpg");
+    background-size: cover;
+    height:250px;
+    width: 30%;
+    display: inline-block;
+}
+.DescriptionProduit{
+    width: 59%;
+    display: inline-block;
+    height: 250px;
+    background-color:rgba(123,117,117,0.4);
+    overflow-x: auto;
+    padding-left: 1%;
+    padding-right: 1%;
+    color: $beige-bg;
+    margin-right: 5px;
+    .TitreProduit{
+        text-align: center;
+    }
+    .TextProduit{
+        text-align: justify;
+    }
+}
+.Control{
+    display: inline-block;
+    vertical-align: bottom;
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li{
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            margin-bottom: 5px;
+            border: 1px solid rgba(123,117,117,0.4);
+            cursor: pointer;
+            transition: .5s;
+            a{
+                line-height: 30px;
+                color: rgba(123,117,117,0.4);
+                transition: .3s;
+            }
+            a:before{
+                font-family: 'Icons';
+            }
+            .ControlAd:before{
+                content: "\e000";
+            }
+            .ControlPicture:before{
+                content: "\e011";
+            }
+            .ControlShare:before{
+                content: "\e014";
+            }
+            .ControlLike:before{
+                content: "\e00a";
+            }
+        }
+        .ControlAdLi{
+            display: none;
+        }
+        .is-active-iconAd:before{
+           content: "\e00C" !important;
+       }
+       .is-active-iconLike{
+           border-color: #A6373F;
+           .ControlLike{
+                color: #A6373F;
+            }
+           .SpanLike{
+               color: #A6373F;
+           }
+       }
+       .is-active-iconPicture{
+           border-color: $rouge;
+           .ControlLike{
+                color: $rouge;
+            }
+       }
+       .ControlAdLi:hover{
+           border-color: #6CB359!important;
+           .ControlAd{
+                color: #6CB359!important;
+            }
+       }
+       
+       .ControlPictureLi:hover{
+           border-color: $rouge !important;
+           .ControlPicture{
+                color: $rouge !important;
+            }
+       }
+       .ControlShareLi:hover{
+           border-color: #4F628E;
+           .ControlShare{
+                color: #4F628E;
+            }
+       }
+       .ControlLikeLi:hover{
+           border-color: #A6373F!important;
+           .ControlLike{
+                color: #A6373F!important;
+            }
+           .SpanLike{
+               color: #A6373F!important;
+           }
+       }
+       .ControlAdLi:active{
+           border-color: #6CB359!important;
+           background-color: #6CB359!important;
+           .ControlAd{
+                color: $beige-bg!important;               
+            }
+       }
+       .ControlPictureLi:active{
+           border-color: $rouge;
+           background-color: $rouge;
+           .ControlPicture{
+                color: $beige-bg;
+            }
+       }
+       .ControlShareLi:active{
+           border-color: #4F628E;
+           background-color: #4F628E;
+           .ControlShare{
+                color: $beige-bg;
+            }
+       }
+       .ControlLikeLi:active{
+           border-color: #A6373F!important;
+           background-color: #A6373F!important;
+           .ControlLike{
+                color: $beige-bg!important;
+            }
+           .SpanLike{
+               color: #A6373F!important;
+           }
+       }
+    }    
+}
+.ControlLikeLi{
+     display: inline-block;
+     margin-right: 3px;
+}
+span{
+     color: rgba(123,117,117,0.4);
+}
+.Picture{
+    width: 91%;
+    font-size: 0;
+    display: none;
+    img{
+        display: inline-block;
+        width:50%;
+        margin:0;
+        height: 300px;
+    }
+    .DerniereImageImpaire{
+        width: 100%;
+        height: 400px;
+    }
+}
+
+.is-active-search{
+    z-index: 9999;
+    position: absolute;
+  transform: translateX(-500px);
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+  margin-left: 0 !important;
+}
+.is-no-active-search{
+    z-index: 1;
+    position: relative;
+  transform: translateX(0px);
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+.btn-cat-site{
+    width: 100%;
+    display: block;
+    height: 80px;
+    background-color: transparent;
+    margin: 0 auto;
+    border: none;
+    color: #f0f0f0;
+    outline: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 10%;
+    font-size: 1.5em;
+    font-family: 'Josefin Sans';
+    transition: .3s;
+}
+.grey{
+    background-color: #807a7a;
+}
+.btn-cat-site:hover{
+    background-color: #e0dfdf !important;
+}
+.checkout{
+    display: none;
+}
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;border-width:1px;border-style:solid; width:100%;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 10px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 10px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
+td{transition: .3s;}
+td:hover{background-color: #baeacc; color: #ffffff;}
+#CatProd{
+    text-align: center;
+    font-size: 1.2em;
+    color: $gris-claire;
+}
+        .titre-menu{
+    height: 70px;
+}
+    .div-btn-cat-site{
+    height: calc(100% - 150px);
+}
+@media screen and (max-width: 767px) {.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}
+@media screen and (max-width:1420px ) {
+    /*.checkout{
+        display: block;
+    }*/
+    #Search{
+        width: 60%;
+        left: 20%;
+        margin-left: 0;
+    }
+    .is-no-active-search{
+        width: 60% !important; 
+        left:20% !important;
+    }
+    #RightContent{
+        display: none;
+    }
+    #Content{
+        width: 80%;
+        margin-left: 10%;
+    }
+    #IconSearch:before{
+        font-size: 14px;
+    }
+    .ImageProduit{
+        display: block;
+        width: 100%;
+        height: 350px;
+    }
+    .DescriptionProduit{
+        margin-left: 0;
+        width: 98%;
+        height: auto;
+    }
+    .Picture{
+        width: 90%;
+    }
+    .Control ul li{
+        display: inline-block;
+        margin-right: 5px;
+    }
+    .site-container{
+        overflow-x: hidden;
+    }
+        .titre-menu{
+    height: 150px;
+}
+    .div-btn-cat-site{
+    height: calc(100% - 230px);
+}
+}
+@media screen and (max-width:750px ) {
+    #Search{
+        width: 80%;
+        left: 10%;
+        margin-left: 0;
+    }
+    .is-no-active-search{
+        width: 80% !important; 
+        left: 10% !important;
+    }
+    #Content{
+        width: 100%;
+        margin-left:0;
+    }
+}
+@media screen and (max-width:630px ) {
+    #TitrePage{
+        h1{
+            font-size: 1.5em;
+        }
+        h2{
+            font-size: 1em;
+        }
+    }
+    .titre-menu{
+    height: 110px;
+}
+        .div-btn-cat-site{
+    height: calc(100% - 190px);
+}
+}

@@ -1,0 +1,58 @@
+﻿$beige-bg: #f0f0f0;
+$gris-claire: #7b7575;
+$rouge: #ff5e5e;
+@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
+@font-face {
+	font-family: "Icons";
+	src: url("FONTS/Icons/flaticon.eot");
+	src: url("FONTS/Icons/flaticon.eot#iefix") format("embedded-opentype"),
+	url("FONTS/Icons/flaticon.woff") format("woff"),
+	url("FONTS/Icons/flaticon.ttf") format("truetype"),
+	url("FONTS/Icons/flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+#ShopContent{
+    display:none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: auto;
+    background-color: $gris-claire;
+    color: $beige-bg;
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+    #IconArt:before{
+        font-family: 'Icons';
+        font-size: 2em;
+        content:"\e002";
+    }
+    #IconPrice:before{
+        font-family: 'Icons';
+        font-size: 2em;
+        content: "\e00e";
+    }
+}
+#Shop{
+    margin-bottom: 10px;
+    div{
+        width: 70%;
+        margin: 0 auto;
+        p{
+            display: inline-block;
+            margin: 0;
+        }
+    }   
+    #Article,#Price{
+        margin: 0;
+        width:100%;
+    }
+}
+#TextArt,#TextPrice{
+    width: 80%;
+}
+#Commande{
+    border-top: 3px dashed $beige-bg;
+    cursor: pointer;
+}

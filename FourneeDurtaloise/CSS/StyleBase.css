@@ -1,0 +1,38 @@
+﻿@import url(preload.css);
+@import url(Menu.css);
+@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+@font-face {
+  font-family: "Icons";
+  src: url("FONTS/Icons/flaticon.eot");
+  src: url("FONTS/Icons/flaticon.eot#iefix") format("embedded-opentype"), url("FONTS/Icons/flaticon.woff") format("woff"), url("FONTS/Icons/flaticon.ttf") format("truetype"), url("FONTS/Icons/flaticon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  background-color: #f0f0f0;
+  font-family: 'Josefin Sans', sans-serif;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden; }
+
+#TitrePage {
+  text-align: center;
+  font-family: 'Julius Sans One', sans-serif;
+  color: #ff5e5e; }
+  #TitrePage h1 {
+    font-size: 3em;
+    margin: 0;
+    opacity: 0.9; }
+  #TitrePage h2 {
+    margin: 0;
+    font-size: 2em;
+    opacity: 0.8; }
+
+@media screen and (max-width: 1420px) {
+  #TitrePage {
+    padding-top: 80px; }
+  #ShopContent {
+    display: none; } }
+
